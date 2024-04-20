@@ -28,13 +28,20 @@ if "arab_words" not in st.session_state:
     st.session_state.arab_words = pd.read_csv('Data/Arab words.csv')
     st.session_state.arab_words.columns = ['Spanish', 'Pronunciation', 'Arabic']
 
+if "vocabulary" not in st.session_state:
+    st.session_state["vocabulary"] = pd.read_csv('Data/arab vocabulary.csv'
+                                                 , usecols="Español	Ingles	Arabe	Pronunciacion	Categoria".split("\t")
+                                                 , sep="\t"
+                                                )
+
 # Crear la interfaz del teclado
 st.title('Translate from spanish to arabic')
 
 if "random_word" not in st.session_state:
-    st.session_state.random_word = st.session_state.arab_words.sample(n=1)
+    st.session_state.random_word = st.session_state["vocabulary"].sample(n=1)
 
-st.write('Translate from spanish to arabic: '+st.session_state.random_word['Spanish'].values[0])
+# st.write('Translate from spanish to arabic: '+st.session_state.random_word['Spanish'].values[0])
+st.write('Translate from spanish to arabic: '+st.session_state.random_word['Español'].values[0])
 
 tab1, tab2 = st.tabs(['Online keyboard', 'I have a keyboard'])
 
@@ -87,7 +94,7 @@ with tab1:
         st.session_state.entrada_teclado = st.session_state.entrada_teclado[:-1]
 
     if z3.button('Show', key='show'):
-        st.write(st.session_state.random_word['Arabic'].values[0] + ' (%s)' % st.session_state.random_word['Pronunciation'].values[0])
+        st.write(st.session_state.random_word['Arabe'].values[0] + ' (%s)' % st.session_state.random_word['Pronunciacion'].values[0])
         # st.markdown(contenedor_html(st.session_state.random_word['Arabic'].values[0] + ' (%s)' % st.session_state.random_word['Pronunciation'].values[0]
         #                             , "#DCE7FA"), unsafe_allow_html=True)
 
@@ -100,7 +107,7 @@ with tab1:
     st.markdown(contenedor_html(st.session_state.entrada_teclado, "#DCE7FA"), unsafe_allow_html=True)
 
     def check_word(word):
-        if st.session_state.random_word['Arabic'].values[0] == word:
+        if st.session_state.random_word['Arabe'].values[0] == word:
             return True
         else:
             return False
