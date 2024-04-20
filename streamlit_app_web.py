@@ -129,7 +129,7 @@ with tab1:
             st.markdown('<p style="color:Red;">Incorrect</p>', unsafe_allow_html=True)
 
     if st.button('New word', key='new'):
-        st.session_state.random_word = st.session_state.arab_words.sample(n=1)
+        st.session_state.random_word = st.session_state["vocabulary"].query('Categoria == @category').sample(n=1)
         st.session_state.entrada_teclado = ""
 with tab2:
 
