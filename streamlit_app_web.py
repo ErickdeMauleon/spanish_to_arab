@@ -24,14 +24,13 @@ def contenedor_html(word, color_fondo):
 if "entrada_teclado" not in st.session_state:
     st.session_state.entrada_teclado = ""
 
-if "arab_words" not in st.session_state:
-    st.session_state.arab_words = pd.read_csv('Data/Arab words.csv')
-    st.session_state.arab_words.columns = ['Spanish', 'Pronunciation', 'Arabic']
+# if "arab_words" not in st.session_state:
+#     st.session_state.arab_words = pd.read_csv('Data/Arab words.csv')
+#     st.session_state.arab_words.columns = ['Spanish', 'Pronunciation', 'Arabic']
 
 if "vocabulary" not in st.session_state:
     st.session_state["vocabulary"] = pd.read_csv('Data/arab vocabulary.csv'
                                                  , usecols="Español	Ingles	Arabe	Pronunciacion	Categoria".split("\t")
-                                                 , sep="\t"
                                                 )
 
 # Crear la interfaz del teclado
