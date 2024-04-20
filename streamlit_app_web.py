@@ -52,7 +52,7 @@ if "random_word" not in st.session_state:
     st.session_state.random_word = st.session_state["vocabulary"].query('Categoria == @category').sample(n=1)
 
 # st.write('Translate from spanish to arabic: '+st.session_state.random_word['Spanish'].values[0])
-st.write('Translate from spanish to arabic: '+st.session_state.random_word['Español'].values[0] + ' (%s)' % st.session_state.random_word['Ingles'].values[0]
+st.write('Translate from spanish to arabic: '+st.session_state.random_word['Español'].values[0] + ' (%s)' % st.session_state.random_word['Ingles'].values[0])
 
 tab1, tab2 = st.tabs(['Online keyboard', 'I have a keyboard'])
 
