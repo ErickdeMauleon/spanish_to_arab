@@ -29,9 +29,11 @@ if "entrada_teclado" not in st.session_state:
 #     st.session_state.arab_words.columns = ['Spanish', 'Pronunciation', 'Arabic']
 
 if "vocabulary" not in st.session_state:
-    st.session_state["vocabulary"] = pd.read_csv('Data/arab vocabulary.csv'
+    st.session_state["vocabulary"] = (pd.read_csv('Data/arab vocabulary.csv'
                                                  , usecols="Español	Ingles	Arabe	Pronunciacion	Categoria".split("\t")
                                                 )
+                                      .query('Categoria.notnull()')
+                                    )
     st.session_state["category"] = list(st.session_state["vocabulary"]["Categoria"].unique())
     st.session_state["category"].sort()
 
