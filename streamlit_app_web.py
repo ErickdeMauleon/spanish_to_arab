@@ -32,12 +32,19 @@ if "vocabulary" not in st.session_state:
     st.session_state["vocabulary"] = pd.read_csv('Data/arab vocabulary.csv'
                                                  , usecols="Español	Ingles	Arabe	Pronunciacion	Categoria".split("\t")
                                                 )
+    st.session_state["category"] = list(st.session_state["vocabulary"]["Categoria"].unique())
+    st.session_state["category"].sort()
+
 
 # Crear la interfaz del teclado
 st.title('Translate from spanish to arabic')
 
+
+
+category = st.selectbox('Select a category', st.session_state["category"])
+
 if "random_word" not in st.session_state:
-    st.session_state.random_word = st.session_state["vocabulary"].sample(n=1)
+    st.session_state.random_word = st.session_state["vocabulary"].query('Categoria == @category').sample(n=1)
 
 # st.write('Translate from spanish to arabic: '+st.session_state.random_word['Spanish'].values[0])
 st.write('Translate from spanish to arabic: '+st.session_state.random_word['Español'].values[0])
