@@ -117,19 +117,7 @@ with tab1:
     # Mostrar el contenedor HTML
     st.markdown(contenedor_html(st.session_state.entrada_teclado, "#DCE7FA"), unsafe_allow_html=True)
 
-    def check_word(word):
-        if st.session_state.random_word['Arabe'].values[0] == word:
-            return True
-        else:
-            return False
-        
-    if st.button('Check', key='check'):
-        if check_word(st.session_state.entrada_teclado):
-            # Markdown Correct in green
-            st.markdown('<p style="color:Green;">Correct</p>', unsafe_allow_html=True)
-        else:
-            # Markdown Incorrect in red
-            st.markdown('<p style="color:Red;">Incorrect</p>', unsafe_allow_html=True)
+
 
 
 
@@ -138,7 +126,19 @@ with tab2:
     entrada = st.text_area('Enter the text in arabic:', value=st.session_state.entrada_teclado, height=5)
 
 
-
+def check_word(word):
+    if st.session_state.random_word['Arabe'].values[0] == word:
+        return True
+    else:
+        return False
+    
+if st.button('Check', key='check'):
+    if check_word(st.session_state.entrada_teclado):
+        # Markdown Correct in green
+        st.markdown('<p style="color:Green;">Correct</p>', unsafe_allow_html=True)
+    else:
+        # Markdown Incorrect in red
+        st.markdown('<p style="color:Red;">Incorrect</p>', unsafe_allow_html=True)
 
 
 
