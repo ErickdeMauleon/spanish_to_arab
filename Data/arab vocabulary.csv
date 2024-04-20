@@ -1,0 +1,215 @@
+Español	Ingles	Arabe	Pronunciacion	Categoria
+Elefante	Elephant	فيل	fil	Animal
+Perro	Dog	كلب	kalb	Animal
+Gato	Cat	قط	qiṭ	Animal
+León	Lion	أسد	asad	Animal
+Tigre	Tiger	نمر	namir	Animal
+Oso	Bear	دب	dubb	Animal
+Cebra	Zebra	حمار وحشي	ḥimar waḥshi	Animal
+Jirafa	Giraffe	زرافة	zarafa	Animal
+Mono	Monkey	قرد	qird	Animal
+Ratón	Mouse	فأر	far	Animal
+Vaca	Cow	بقرة	baqara	Animal
+Caballo	Horse	حصان	ḥiṣan	Animal
+Conejo	Rabbit	أرنب	arnab	Animal
+Canguro	Kangaroo	كنغر	kangar	Animal
+Camello	Camel	جمل	jamal	Animal
+Cocodrilo	Crocodile	تمساح	timsāḥ	Animal
+Pato	Duck	بط	baṭ	Animal
+Águila	Eagle	نسر	nasr	Animal
+Búho	Owl	بومة	buma	Animal
+Pájaro	Bird	طائر	ṭair	Animal
+Vibora	Snake	ثعبان	ṯaeban	Animal
+Tortuga	Turtle	سلحفاة	sulḥafat	Animal
+Cabra	Goat	ماعز	maeiz	Animal
+Cerdo	Pig	خنزير	xinzir	Animal
+Rana	Frog	ضفدع	difda	Animal
+Burro	Donkey	حمار	ḥimar	Animal
+Murciélago	Bat	وطواط	watwat	Animal
+Hormiga	Ant	نملة	namla	Animal
+Araña	Spider	عنكبوت	ankabut	Animal
+Mosca	Fly	ذبابة	dhubaba	Animal
+Abeja	Bee	نحلة	nahl	Animal
+Mariposa	Butterfly	فراشة	farasha	Animal
+Insecto	Insect	حشرة	ḥashara	Animal
+Lobo	Wolf	ذئب di-b	Animal
+Zorro	Fox	ثعلب	tealab	Animal
+Animal	Animal	حيوان	hayawan	Animal
+Pez	Fish	سمك	samak	Animal
+Ballena	Whale	حوت	hut	Animal
+Tiburón	Shark	قرش	qirsh	Animal
+Delfín	Dolphin	دلفين	dalfin	Animal
+Estrella de mar	Starfish	نجم البحر	najm albahar	Animal
+Pulpo	Octopus	أخطبوط	akhṭabut	Animal
+Oveja    Sheep	غنم	ghanam	Animal
+Comer    Eat	أكل	akala	Verbo
+Beber    Drink	شرب	shariba	Verbo
+Dormir    Sleep	نام	nama	Verbo
+Correr    Run	ركض	rakad	Verbo
+Caminar    Walk	مشى	masha	Verbo
+Saltar    Jump	قفز	qafaza	Verbo
+Ver    See	رأى	raa	Verbo
+Volar    Fly	طار	tara	Verbo
+Nadar    Swim	سبح	sabah	Verbo
+Escuchar    Listen	استمع	istama	Verbo
+Hablar    Speak	تكلم	takalam	Verbo
+Gritar    Shout	صرخ	sarakh	Verbo
+Reír    Laugh	ضحك	dahak	Verbo
+Llorar    Cry	بكى	baka	Verbo
+Ir    Go	ذهب	zahaba	Verbo
+Venir    Come	جاء	jaa	Verbo
+Sentarse    Sit	جلس	jalasa	Verbo
+Recordar   Remember	تذكر	tadhakar	Verbo
+Estudiar   Study	درس	daras	Verbo
+Despertar   Wake up	صحي	sahi	Verbo
+Conocer  Know	عرف	arafa	Verbo
+Olvidar Forget	نسي	nasi	Verbo
+Leer	Read	قرأ	akra	Verbo
+Escribir	Write	كتب	katab	Verbo
+Vivir	Live	عاش	aasha	Verbo
+Comprar    Buy	اشترى	ichtara	Verbo
+Cocinar    Cook	طبخ	tabakh	Verbo
+Jugar	Play	لعب	laba	Verbo
+Trabajar	Work	عمل	aamal	Verbo
+Querer	Want	أراد	arada	Verbo
+Poder	Can	استطاع	istaata	Verbo
+Manejar	Drive	قاد	qad	Verbo
+Pensar	Think	فكر	fakar	Verbo
+Gustar	Like	أحب	ahab	Verbo
+Escuela	School	مدرسة	madrasa	Lugares
+Casa	House	بيت	bait	Lugares
+Hospital	Hospital	مستشفى	mustashfa	Lugares
+Tienda	Shop	محل	mahal	Lugares
+Cine	Cinema	سينما	sinema	Lugares
+Teatro	Theater	مسرح	masrah	Lugares
+Banco	Bank	بنك	bank	Lugares
+Restaurante	Restaurant	مطعم	matam	Lugares
+Hotel	Hotel	فندق	funduq	Lugares
+Parque	Park	حديقة	hadiqa	Lugares
+Playa	Beach	شاطئ	shati	Lugares
+Montaña	Mountain	جبل	jabal	Lugares
+Río	River	نهر	nahr	Lugares
+Lago	Lake	بحيرة	buhayra	Lugares
+Mar	Sea	بحر	bahr	Lugares
+Mezquita	Mosque	مسجد	masjid	Lugares
+Iglesia	Church	كنيسة	kanisa	Lugares
+Cafetería	Cafeteria	كافتيريا	cafeteria	Lugares
+Universidad	University	جامعة	jamia	Lugares
+Aeropuerto	Airport	مطار	matar	Lugares
+Farmacia	Pharmacy	صيدلية	saydaliya	Lugares
+Biblioteca	Library	مكتبة	maktaba	Lugares
+Supermercado	Supermarket	سوبر ماركت	supermarket	Lugares
+Museo	Museum	متحف	mathaf	Lugares
+Carro   Car	سيارة	sayara	Transporte
+Avión   Plane	طائرة	tayara	Transporte
+Tren   Train	قطار	qitar	Transporte
+Barco   Ship	سفينة	safina	Transporte
+Bicicleta   Bicycle	دراجة	daraja	Transporte
+Manzana   Apple	تفاحة	tufaha	Frutas y Verduras
+Plátano   Banana	موز	mawz	Frutas y Verduras
+Naranja   Orange	برتقال	burtuqal	Frutas y Verduras
+Uva   Grape	عنب	aeinab	Frutas y Verduras
+Fresa   Strawberry	فراولة	farawla	Frutas y Verduras
+Sandía   Watermelon	بطيخ	bateekh	Frutas y Verduras
+Melón   Melon	شمام	shamam	Frutas y Verduras
+Pera   Pear	كمثرى	kamathara	Frutas y Verduras
+Mango   Mango	مانجو	mango	Frutas y Verduras
+Piña   Pineapple	أناناس	ananas	Frutas y Verduras
+Cereza   Cherry	كرز	karaz	Frutas y Verduras
+Limón   Lemon	ليمون	laimun	Frutas y Verduras
+Papaya   Papaya	بابايا	babaya	Frutas y Verduras
+Calabaza   Pumpkin	يقطين	yakteen	Frutas y Verduras
+Zanahoria   Carrot	جزر	jazar	Frutas y Verduras
+Papa   Potato	بطاطس	batatis	Frutas y Verduras
+Tomate   Tomato	طماطم	tamatem	Frutas y Verduras
+Pepino   Cucumber	خيار	khiyar	Frutas y Verduras
+Espinaca   Spinach	سبانخ	sabanekh	Frutas y Verduras
+Lechuga   Lettuce	خس	khass	Frutas y Verduras
+Repollo   Cabbage	ملفوف	malfouf	Frutas y Verduras
+Brócoli   Broccoli	بروكلي	brokli	Frutas y Verduras
+Coliflor   Cauliflower	قرنبيط	qarnabit	Frutas y Verduras
+Ajo   Garlic	ثوم	thoum	Frutas y Verduras
+Cebolla   Onion	بصل	basal	Frutas y Verduras
+Pimiento   Pepper	فلفل	felfel	Frutas y Verduras
+Mora   Blackberry	توت	tout	Frutas y Verduras
+Fruta  Fruit	فاكهة	fakha	Frutas y Verduras
+Verdura   Vegetable	خضروات	khudrawat	Frutas y Verduras
+Berenjena   Eggplant	باذنجان	badinjan	Frutas y Verduras
+Pastel   Cake	كعكة	kaika	Comida
+Helado   Ice cream	آيس كريم	ais krim	Comida
+Chocolate   Chocolate	شوكولاتة	shokolata	Comida
+Galleta   Cookie	بسكويت	biskwit	Comida
+Pan   Bread	خبز	khubz	Comida
+Arroz   Rice	أرز	aruz	Comida
+Carne   Meat	لحم	laham	Comida
+Pollo   Chicken	دجاج	dajaj	Comida
+Pescado   Fish	سمك	samak	Comida
+Huevo   Egg	بيضة	bayda	Comida
+Queso   Cheese	جبنة	gibna	Comida
+Leche   Milk	حليب	halib	Comida
+Agua   Water	ماء	maa	Comida
+Jugo   Juice	عصير	aseer	Comida
+Té   Tea	شاي	shay	Comida
+Café   Coffee	قهوة	qahwa	Comida
+Sopa   Soup	حساء	hassa	Comida
+Miel  Honey	عسل	asal	Comida
+Azucar   Sugar	سكر	sukkar	Comida
+Aceituana   Olive	زيتون	zaytun	Comida
+Sal   Salt	ملح	milh	Comida
+Comida   Food	طعام	taam	Comida
+Bebida   Drink	مشروب	mashroob	Comida
+Pasta   Pasta	مكرونة	makarona	Comida
+Pizza   Pizza	بيتزا	pizza	Comida
+Hamburguesa   Hamburger	همبرغر	hamburger	Comida
+Sándwich   Sandwich	ساندويتش	sandwich	Comida
+Ensalada   Salad	سلطة	salata	Comida
+Yogur   Yogurt	زبادي	zabadi	Comida
+Salsa   Sauce	صلصة	salsa	Comida
+Feliz   Happy	سعيد	saeed	Adjetivos
+Triste   Sad	حزين	hazeen	Adjetivos
+Enfermo   Sick	مريض	mareed	Adjetivos
+Sano   Healthy	صحي	sahi	Adjetivos
+Cansado   Tired	متعب	mataab	Adjetivos
+Despierto   Awake	مستيقظ	mustaiqiz	Adjetivos
+Dormido   Asleep	نائم	naim	Adjetivos
+Caliente   Hot	ساخن	sakhin	Adjetivos
+Frío   Cold	بارد	barid	Adjetivos
+Rápido   Fast	سريع	saree	Adjetivos
+Lento   Slow	بطيء	batee	Adjetivos
+Alto   Tall	طويل	taweel	Adjetivos
+Bajo   Short	قصير	qaseer	Adjetivos
+Gordo   Fat	سمين	sameen	Adjetivos
+Delgado   Thin	نحيف	naheef	Adjetivos
+Fuerte   Strong	قوي	qawi	Adjetivos
+Débil   Weak	ضعيف	daeeef	Adjetivos
+Bueno   Good	جيد	jayed	Adjetivos
+Malo   Bad	سيء	sayee	Adjetivos
+Nuevo   New	جديد	jadeed	Adjetivos
+Viejo   Old	قديم	kadeem	Adjetivos
+Grande   Big	كبير	kabeer	Adjetivos
+Pequeño   Small	صغير	sagheer	Adjetivos
+Limpio   Clean	نظيف	nadeef	Adjetivos
+Sucio   Dirty	وسخ	wasakh	Adjetivos
+Bonito   Beautiful	جميل	jameel	Adjetivos
+Feo   Ugly	قبيح	qabeeh	Adjetivos
+Caro   Expensive	غالي	ghali	Adjetivos
+Barato   Cheap	رخيص	rakhees	Adjetivos
+Fácil   Easy	سهل	sahel	Adjetivos
+Difícil   Difficult	صعب	saeb	Adjetivos
+Abierto   Open	مفتوح	moftooh	Adjetivos
+Cerrado   Closed	مغلق	maghloob	Adjetivos
+Azul   Blue	أزرق	azraq	Colores
+Rojo   Red	أحمر	ahmar	Colores
+Amarillo   Yellow	أصفر	asfar	Colores
+Verde   Green	أخضر	akhdar	Colores
+Blanco   White	أبيض	abyad	Colores
+Negro   Black	أسود	aswad	Colores
+Naranja	Orange	برتقالي	burtuqali	Colores
+Café	Brown	بني	buni	Colores
+Rosa    Pink	وردي	wardi	Colores
+Morado	Purple	بنفسجي	banafsaji	Colores
+Gris	Grey	رمادي	ramadi	Colores
+
+
+
+
