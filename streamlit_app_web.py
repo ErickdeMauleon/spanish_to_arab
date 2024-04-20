@@ -131,6 +131,7 @@ with tab1:
     if st.button('New word', key='new'):
         st.session_state.random_word = st.session_state["vocabulary"].query('Categoria == @category').sample(n=1)
         st.session_state.entrada_teclado = ""
+        st.rerun()
 with tab2:
 
     entrada = st.text_area('Enter the text in arabic:', value=st.session_state.entrada_teclado, height=5)
