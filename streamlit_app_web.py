@@ -96,37 +96,36 @@ with tab1:
             else:
                 st.session_state.entrada_teclado += teclado[6][i] 
 
+    z1, z2, z3, z4, z5, z6, z7 = st.columns(7)
+    # Botón para borrar la entrada del teclado
+    if z1.button('Clean all', key='clean'):
+        st.session_state.entrada_teclado = ""
 
+    if z2.button('Delete', key='delete'):
+        st.session_state.entrada_teclado = st.session_state.entrada_teclado[:-1]
 
+    if z3.button('Show', key='show'):
+        st.write(st.session_state.random_word['Arabe'].values[0] + ' (%s)' % st.session_state.random_word['Pronunciacion'].values[0])
+        # st.markdown(contenedor_html(st.session_state.random_word['Arabic'].values[0] + ' (%s)' % st.session_state.random_word['Pronunciation'].values[0]
+        #                             , "#DCE7FA"), unsafe_allow_html=True)
 
+    st.markdown(contenedor_html(st.session_state.entrada_teclado, "#DCE7FA"), unsafe_allow_html=True)
 
 
 
 with tab2:
 
-    entrada = st.text_area('Enter the text in arabic:', value=st.session_state.entrada_teclado, height=5)
+    st.session_state.entrada_teclado = st.text_area('Enter the text in arabic:', value=st.session_state.entrada_teclado, height=5)
 
+    _z1, _, _, _, _, _, _ = st.columns(7)
 
-z1, z2, z3, z4, z5, z6, z7 = st.columns(7)
-# Botón para borrar la entrada del teclado
-if z1.button('Clean all', key='clean'):
-    st.session_state.entrada_teclado = ""
-
-if z2.button('Delete', key='delete'):
-    st.session_state.entrada_teclado = st.session_state.entrada_teclado[:-1]
-
-if z3.button('Show', key='show'):
-    st.write(st.session_state.random_word['Arabe'].values[0] + ' (%s)' % st.session_state.random_word['Pronunciacion'].values[0])
-    # st.markdown(contenedor_html(st.session_state.random_word['Arabic'].values[0] + ' (%s)' % st.session_state.random_word['Pronunciation'].values[0]
-    #                             , "#DCE7FA"), unsafe_allow_html=True)
-
-# Mostrar la entrada del teclado
-# Definir el color de fondo (en este caso, azul claro)
+    if _z1.button('Show', key='show'):
+        st.write(st.session_state.random_word['Arabe'].values[0] + ' (%s)' % st.session_state.random_word['Pronunciacion'].values[0])
+        # st.markdown(contenedor_html(st.session_state.random_word['Arabic'].values[0] + ' (%s)' % st.session_state.random_word['Pronunciation'].values[0]
+        #                             , "#DCE7FA"), unsafe_allow_html=True)
 
 
 
-# Mostrar el contenedor HTML
-st.markdown(contenedor_html(st.session_state.entrada_teclado, "#DCE7FA"), unsafe_allow_html=True)
 
 def check_word(word):
     if st.session_state.random_word['Arabe'].values[0] == word:
