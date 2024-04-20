@@ -119,7 +119,7 @@ with tab2:
 
     _z1, _, _, _, _, _, _ = st.columns(7)
 
-    if _z1.button('Show', key='show'):
+    if _z1.button('Show', key='show2'):
         st.write(st.session_state.random_word['Arabe'].values[0] + ' (%s)' % st.session_state.random_word['Pronunciacion'].values[0])
         # st.markdown(contenedor_html(st.session_state.random_word['Arabic'].values[0] + ' (%s)' % st.session_state.random_word['Pronunciation'].values[0]
         #                             , "#DCE7FA"), unsafe_allow_html=True)
