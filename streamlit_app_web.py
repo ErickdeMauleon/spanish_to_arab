@@ -34,6 +34,7 @@ if "vocabulary" not in st.session_state:
                                                 )
                                       .query('Categoria.notnull()')
                                     )
+    st.session_state["vocabulary"]["weight_to_sample"] = 1
     st.session_state["category"] = list(st.session_state["vocabulary"]["Categoria"].unique())
     st.session_state["category"].sort()
 
@@ -44,17 +45,22 @@ st.title('Translate from spanish to arabic')
 
 
 category = st.selectbox('Select a category', st.session_state["category"])
-if st.button('New word', key='new'):
-    st.session_state.random_word = st.session_state["vocabulary"].query('Categoria == @category').sample(n=1)
-    st.session_state.entrada_teclado = ""
 
 if "random_word" not in st.session_state:
     st.session_state.random_word = st.session_state["vocabulary"].query('Categoria == @category').sample(n=1)
+    
+if st.button('New word', key='new'):
+    st.session_state.random_word = st.session_state["vocabulary"].query('Categoria == @category').sample(n=1, weights='weight_to_sample')
+    st.session_state.entrada_teclado = ""
+
+
 
 # st.write('Translate from spanish to arabic: '+st.session_state.random_word['Spanish'].values[0])
 st.write('Translate from spanish to arabic: '+st.session_state.random_word['Español'].values[0] + ' (%s)' % st.session_state.random_word['Ingles'].values[0])
 
 tab1, tab2 = st.tabs(['Online keyboard', 'I have a keyboard'])
+
+tries = 0
 
 with tab1:
     a1, a2, a3, a4, a5, a6, a7 = st.columns(7)
@@ -106,8 +112,7 @@ with tab1:
 
     if z3.button('Show', key='show'):
         st.write(st.session_state.random_word['Arabe'].values[0] + ' (%s)' % st.session_state.random_word['Pronunciacion'].values[0])
-        # st.markdown(contenedor_html(st.session_state.random_word['Arabic'].values[0] + ' (%s)' % st.session_state.random_word['Pronunciation'].values[0]
-        #                             , "#DCE7FA"), unsafe_allow_html=True)
+        tries += 0.5
 
     st.markdown(contenedor_html(st.session_state.entrada_teclado, "#DCE7FA"), unsafe_allow_html=True)
 
@@ -121,8 +126,7 @@ with tab2:
 
     if _z1.button('Show', key='show2'):
         st.write(st.session_state.random_word['Arabe'].values[0] + ' (%s)' % st.session_state.random_word['Pronunciacion'].values[0])
-        # st.markdown(contenedor_html(st.session_state.random_word['Arabic'].values[0] + ' (%s)' % st.session_state.random_word['Pronunciation'].values[0]
-        #                             , "#DCE7FA"), unsafe_allow_html=True)
+        tries += 0.5
 
 
 
@@ -140,6 +144,7 @@ if st.button('Check', key='check'):
     else:
         # Markdown Incorrect in red
         st.markdown('<p style="color:Red;">Incorrect</p>', unsafe_allow_html=True)
+        tries += 1
 
 
 
