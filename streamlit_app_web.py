@@ -138,7 +138,7 @@ def check_word(word):
         return False
     
 if st.button('Check', key='check'):
-    if check_word(st.session_state.entrada_teclado):
+    if check_word(st.session_state.entrada_teclado.strip()):
         # Markdown Correct in green
         st.markdown('<p style="color:Green;">Correct</p>', unsafe_allow_html=True)
         st.session_state.entrada_teclado = ""
