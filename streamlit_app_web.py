@@ -48,7 +48,7 @@ category = st.selectbox('Select a category', st.session_state["category"])
 
 if "random_word" not in st.session_state:
     st.session_state.random_word = st.session_state["vocabulary"].query('Categoria == @category').sample(n=1)
-    
+
 if st.button('New word', key='new'):
     st.session_state.random_word = st.session_state["vocabulary"].query('Categoria == @category').sample(n=1, weights='weight_to_sample')
     st.session_state.entrada_teclado = ""
@@ -141,6 +141,8 @@ if st.button('Check', key='check'):
     if check_word(st.session_state.entrada_teclado):
         # Markdown Correct in green
         st.markdown('<p style="color:Green;">Correct</p>', unsafe_allow_html=True)
+        st.session_state.entrada_teclado = ""
+        st.session_state["vocabulary"].loc[st.session_state.random_word.index, 'weight_to_sample'] += tries
     else:
         # Markdown Incorrect in red
         st.markdown('<p style="color:Red;">Incorrect</p>', unsafe_allow_html=True)
