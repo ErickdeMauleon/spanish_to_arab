@@ -74,11 +74,12 @@ if "entrada_teclado" not in st.session_state:
 
 if "vocabulary" not in st.session_state:
     st.session_state["vocabulary"] = (pd.read_csv('Data/arab vocabulary.csv'
-                                                 , usecols="Español	Ingles	Arabe	Pronunciacion	Categoria".split("\t")
+                                                #  , usecols="Español	Ingles	Arabe	Pronunciacion	Categoria".split("\t")
                                                 )
                                       .query('Categoria.notnull()')
+                                      
                                     )
-    _temp = pd.read_csv('Data/previous_weights.csv')
+    _temp = pd.read_csv('Data/previous_weights.csv').drop_duplicates(subset=['Español'])
     st.session_state["vocabulary"] = st.session_state["vocabulary"].merge(_temp, on='Español', how='left').fillna(1)
     st.session_state["category"] = list(st.session_state["vocabulary"]["Categoria"].unique())
     st.session_state["category"].sort()
