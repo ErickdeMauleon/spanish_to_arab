@@ -149,4 +149,5 @@ if st.button('Check', key='check'):
         tries += 1
 
 
-
+if st.button('Save', key='save'):
+    st.session_state["vocabulary"].to_csv('Data/arab vocabulary2.csv', index=False, sep='\t')
