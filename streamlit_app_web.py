@@ -33,10 +33,10 @@ def upload_github(dataframe, git_file, repo_name, git_token):
             if git_file in all_files:
                 contents = repo.get_contents(git_file)
                 repo.update_file(contents.path, "committing files", content, contents.sha, branch="main")
-                # print(git_file + ' UPDATED ' + str(datetime.now())[:19])
+                # print(git_file + ' UPDATED ' )
             else:
                 repo.create_file(git_file, "committing files", content, branch="main")
-                # print(git_file + ' CREATED ' + str(datetime.now())[:19])
+                # print(git_file + ' CREATED ' )
 
             uploaded = True
         except:
@@ -203,8 +203,9 @@ if st.button('Save', key='save'):
     repo_name = "spanish_to_arab"
     git_token = st.secrets["GITHUB"]
 
-    upload_github(st.session_state["vocabulary"].filter(['Español', 'weight_to_sample'])
+    if upload_github(st.session_state["vocabulary"].filter(['Español', 'weight_to_sample'])
                     , "Data/previous_weights.csv"
                     , repo_name
                     , git_token
-                    )
+                    ):
+        st.markdown('<p style="color:Green;">Data saved</p>', unsafe_allow_html=True)
