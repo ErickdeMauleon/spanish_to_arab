@@ -94,9 +94,13 @@ category = st.selectbox('Select a category', st.session_state["category"])
 if "random_word" not in st.session_state:
     st.session_state.random_word = st.session_state["vocabulary"].query('Categoria == @category').sample(n=1)
 
+if "tries" not in st.session_state:
+    st.session_state["tries"] = 0
+
 if st.button('New word', key='new'):
     st.session_state.random_word = st.session_state["vocabulary"].query('Categoria == @category').sample(n=1, weights='weight_to_sample')
     st.session_state.entrada_teclado = ""
+    st.session_state["tries"] = 0
 
 
 
@@ -105,7 +109,7 @@ st.write('Translate from spanish to arabic: '+st.session_state.random_word['Espa
 
 tab1, tab2 = st.tabs(['Online keyboard', 'I have a keyboard'])
 
-tries = 0
+
 
 with tab1:
     a1, a2, a3, a4, a5, a6, a7 = st.columns(7)
@@ -157,7 +161,7 @@ with tab1:
 
     if z3.button('Show', key='show'):
         st.write(st.session_state.random_word['Arabe'].values[0] + ' (%s)' % st.session_state.random_word['Pronunciacion'].values[0])
-        tries += 0.5
+        st.session_state["tries"] += 0.25
 
     st.markdown(contenedor_html(st.session_state.entrada_teclado, "#DCE7FA"), unsafe_allow_html=True)
 
@@ -171,7 +175,7 @@ with tab2:
 
     if _z1.button('Show', key='show2'):
         st.write(st.session_state.random_word['Arabe'].values[0] + ' (%s)' % st.session_state.random_word['Pronunciacion'].values[0])
-        tries += 0.5
+        st.session_state["tries"] += 0.25
 
 
 
@@ -187,13 +191,13 @@ if st.button('Check', key='check'):
         # Markdown Correct in green
         st.markdown('<p style="color:Green;">Correct</p>', unsafe_allow_html=True)
         st.session_state.entrada_teclado = ""
-        st.session_state["vocabulary"].loc[st.session_state.random_word.index, 'weight_to_sample'] += tries 
-        if tries == 0:
+        st.session_state["vocabulary"].loc[st.session_state.random_word.index, 'weight_to_sample'] += st.session_state["tries"] 
+        if st.session_state["tries"] == 0:
             st.session_state["vocabulary"].loc[st.session_state.random_word.index, 'weight_to_sample'] -= 0.02 
     else:
         # Markdown Incorrect in red
         st.markdown('<p style="color:Red;">Incorrect</p>', unsafe_allow_html=True)
-        tries += 1
+        st.session_state["tries"] += 0.5
 
 
 if st.button('Save', key='save'):
