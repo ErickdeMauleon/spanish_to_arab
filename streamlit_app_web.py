@@ -204,7 +204,9 @@ if st.button('Save', key='save'):
     repo_name = "spanish_to_arab"
     git_token = st.secrets["GITHUB"]
 
-    if upload_github(st.session_state["vocabulary"].filter(['Español', 'weight_to_sample'])
+    if upload_github(st.session_state["vocabulary"]
+                     .query("weight_to_sample != 1")
+                     .filter(['Español', 'weight_to_sample'])
                     , "Data/previous_weights.csv"
                     , repo_name
                     , git_token
