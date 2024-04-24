@@ -191,13 +191,13 @@ if st.button('Check', key='check'):
         st.session_state.entrada_teclado = ""
         
         if st.session_state["tries"] == 0:
-            w = -0.02 
+            w = -0.04
         else:
             w = 0
         
         old_value = st.session_state["vocabulary"].loc[st.session_state.random_word.index, 'weight_to_sample'].values[0]
 
-        new_value = st.session_state["vocabulary"].loc[st.session_state.random_word.index, 'weight_to_sample'].values[0] + w + st.session_state["tries"]
+        new_value = max(st.session_state["vocabulary"].loc[st.session_state.random_word.index, 'weight_to_sample'].values[0] + w + st.session_state["tries"], 0)
         st.session_state["vocabulary"].loc[st.session_state.random_word.index, 'weight_to_sample'] = new_value
 
         st.write(old_value, st.session_state["vocabulary"].loc[st.session_state.random_word.index, 'weight_to_sample'].values[0]) 
