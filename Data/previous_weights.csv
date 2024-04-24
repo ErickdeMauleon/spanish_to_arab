@@ -1,12 +1,12 @@
 Español,weight_to_sample
-Limpio,0.9
+Limpio,0.88
 Sucio,1.25
 Enojado,1.75
 Contento,1.25
 Grosero,1.25
 Pobre ($),1.25
 Pobre,1.25
-Cansado,1.73
+Cansado,1.71
 Rápido,0.98
 Lento,1.25
 Bajo,1.25
@@ -15,4 +15,5 @@ Nuevo,0.9
 Bonito,0.9
 Feo,1.25
 Fácil,1.25
+Difícil,1.75
 Cerrado,0.98
