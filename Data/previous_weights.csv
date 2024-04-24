@@ -107,6 +107,7 @@ Bicicleta,1.0
 Manzana,1.0
 Plátano,1.0
 Naranja,1.0
+Naranja,1.0
 Uva,1.0
 Fresa,1.0
 Sandía,1.0
@@ -150,6 +151,7 @@ Agua,1.0
 Jugo,1.0
 Té,1.0
 Café,1.0
+Café,1.0
 Sopa,1.0
 Miel,1.0
 Azucar,1.0
@@ -167,12 +169,14 @@ Salsa,1.0
 Feliz,1.0
 Hambriento,1.0
 Limpio,1.0
+Limpio,1.0
+Sucio,1.0
 Sucio,1.0
 Mojado,1.0
 Seco,1.0
 Enojado,1.0
 Contento,1.0
-Asustado,1.0
+Asustado,0.98
 Valiente,1.0
 Tranquilo,1.0
 Cobarde,1.0
@@ -184,7 +188,7 @@ Rico,1.0
 Pobre ($),1.0
 Pobre,1.0
 Vacío,1.0
-Triste,1.0
+Triste,0.96
 Enfermo,1.0
 Sano,1.0
 Cansado,1.0
@@ -207,6 +211,8 @@ Viejo,1.0
 Grande,1.0
 Pequeño,1.0
 Limpio,1.0
+Limpio,1.0
+Sucio,1.0
 Sucio,1.0
 Bonito,0.98
 Feo,1.0
@@ -223,6 +229,8 @@ Verde,1.0
 Blanco,1.0
 Negro,1.0
 Naranja,1.0
+Naranja,1.0
+Café,1.0
 Café,1.0
 Rosa,1.0
 Morado,1.0
