@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 import io
 import time
-import os
+
 from github import Github
 
 def upload_github(dataframe, git_file, repo_name, git_token):
@@ -78,11 +78,8 @@ if "vocabulary" not in st.session_state:
                                                 )
                                       .query('Categoria.notnull()')
                                     )
-    if "previous_weights" not in os.listdir('Data'):
-        st.session_state["vocabulary"]["weight_to_sample"] = 1
-    else:
-        _temp = pd.read_csv('Data/previous_weights.csv')
-        st.session_state["vocabulary"] = st.session_state["vocabulary"].merge(_temp, on='Español', how='left').fillna(1)
+    _temp = pd.read_csv('Data/previous_weights.csv')
+    st.session_state["vocabulary"] = st.session_state["vocabulary"].merge(_temp, on='Español', how='left').fillna(1)
     st.session_state["category"] = list(st.session_state["vocabulary"]["Categoria"].unique())
     st.session_state["category"].sort()
 
