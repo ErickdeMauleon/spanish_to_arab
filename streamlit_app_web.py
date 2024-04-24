@@ -207,6 +207,7 @@ if st.button('Save', key='save'):
     if upload_github(st.session_state["vocabulary"]
                      .query("weight_to_sample != 1")
                      .filter(['Español', 'weight_to_sample'])
+                     .drop_duplicates(subset=['Español'])
                     , "Data/previous_weights.csv"
                     , repo_name
                     , git_token
