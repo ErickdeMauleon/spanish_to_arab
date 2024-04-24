@@ -190,7 +190,9 @@ if st.button('Check', key='check'):
         # Markdown Correct in green
         st.markdown('<p style="color:Green;">Correct</p>', unsafe_allow_html=True)
         st.session_state.entrada_teclado = ""
-        st.session_state["vocabulary"].loc[st.session_state.random_word.index, 'weight_to_sample'] += tries
+        st.session_state["vocabulary"].loc[st.session_state.random_word.index, 'weight_to_sample'] += tries 
+        if tries == 0:
+            st.session_state["vocabulary"].loc[st.session_state.random_word.index, 'weight_to_sample'] -= 0.02 
     else:
         # Markdown Incorrect in red
         st.markdown('<p style="color:Red;">Incorrect</p>', unsafe_allow_html=True)
