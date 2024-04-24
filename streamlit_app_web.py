@@ -1,5 +1,49 @@
 import pandas as pd
 import streamlit as st
+import io
+import time
+import os
+from github import Github
+
+def upload_github(dataframe, git_file, repo_name, git_token):
+    uploaded = False
+
+    g = Github(git_token)
+
+    repo = g.get_user().get_repo(repo_name)
+    all_files = []
+    contents = repo.get_contents("")
+    while contents:
+        file_content = contents.pop(0)
+        if file_content.type == "dir":
+            contents.extend(repo.get_contents(file_content.path))
+        else:
+            file = file_content
+            all_files.append(str(file).replace('ContentFile(path="','').replace('")',''))
+
+    # Convertir el DataFrame a un archivo CSV en memoria
+    csv_buffer = io.StringIO()
+    dataframe.to_csv(csv_buffer, index=False)
+    content = csv_buffer.getvalue()
+    
+    tries = 1
+    while not uploaded and tries < 10:
+        try:
+            # Upload to github    
+            if git_file in all_files:
+                contents = repo.get_contents(git_file)
+                repo.update_file(contents.path, "committing files", content, contents.sha, branch="main")
+                # print(git_file + ' UPDATED ' + str(datetime.now())[:19])
+            else:
+                repo.create_file(git_file, "committing files", content, branch="main")
+                # print(git_file + ' CREATED ' + str(datetime.now())[:19])
+
+            uploaded = True
+        except:
+            time.sleep(10)
+            tries += 1
+
+    return uploaded
 
 # Lista de letras del teclado
 teclado = [
@@ -34,7 +78,11 @@ if "vocabulary" not in st.session_state:
                                                 )
                                       .query('Categoria.notnull()')
                                     )
-    st.session_state["vocabulary"]["weight_to_sample"] = 1
+    if "previous_weights" not in os.listdir('Data'):
+        st.session_state["vocabulary"]["weight_to_sample"] = 1
+    else:
+        _temp = pd.read_csv('Data/previous_weights.csv')
+        st.session_state["vocabulary"] = st.session_state["vocabulary"].merge(_temp, on='Español', how='left').fillna(1)
     st.session_state["category"] = list(st.session_state["vocabulary"]["Categoria"].unique())
     st.session_state["category"].sort()
 
@@ -150,4 +198,11 @@ if st.button('Check', key='check'):
 
 
 if st.button('Save', key='save'):
-    st.session_state["vocabulary"].to_csv('Data/arab vocabulary2.csv', index=False, sep='\t')
+    repo_name = "spanish_to_arab"
+    git_token = st.secrets["GITHUB"]
+
+    upload_github(st.session_state["vocabulary"].filter(['Español', 'weight_to_sample'])
+                    , "Data/previous_weights.csv"
+                    , repo_name
+                    , git_token
+                    )
