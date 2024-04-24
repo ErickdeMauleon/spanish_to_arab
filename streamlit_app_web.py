@@ -68,9 +68,6 @@ def contenedor_html(word, color_fondo):
 if "entrada_teclado" not in st.session_state:
     st.session_state.entrada_teclado = ""
 
-# if "arab_words" not in st.session_state:
-#     st.session_state.arab_words = pd.read_csv('Data/Arab words.csv')
-#     st.session_state.arab_words.columns = ['Spanish', 'Pronunciation', 'Arabic']
 
 if "vocabulary" not in st.session_state:
     st.session_state["vocabulary"] = (pd.read_csv('Data/arab vocabulary.csv'
@@ -80,7 +77,7 @@ if "vocabulary" not in st.session_state:
                                       
                                     )
     _temp = pd.read_csv('Data/previous_weights.csv').drop_duplicates(subset=['Español'])
-    st.session_state["vocabulary"] = st.session_state["vocabulary"].merge(_temp, on='Español', how='left').fillna(1)
+    st.session_state["vocabulary"] = st.session_state["vocabulary"].merge(_temp, on='Español', how='left').fillna({'weight_to_sample': 1})
     st.session_state["category"] = list(st.session_state["vocabulary"]["Categoria"].unique())
     st.session_state["category"].sort()
 
