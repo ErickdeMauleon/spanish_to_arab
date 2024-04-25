@@ -197,8 +197,8 @@ if st.button('Check', key='check'):
         
         old_value = st.session_state["vocabulary"].loc[st.session_state.random_word.index, 'weight_to_sample'].values[0]
 
-        new_value = max(st.session_state["vocabulary"].loc[st.session_state.random_word.index, 'weight_to_sample'].values[0] + w + st.session_state["tries"], 0)
-        st.session_state["vocabulary"].loc[st.session_state.random_word.index, 'weight_to_sample'] = new_value
+        new_value = max(st.session_state["vocabulary"].loc[st.session_state.random_word.index, 'weight_to_sample'].values[0] + w + st.session_state["tries"], 0.10)
+        st.session_state["vocabulary"].loc[st.session_state.random_word.index, 'weight_to_sample'] = round(new_value, 2)
 
         st.write(old_value, st.session_state["vocabulary"].loc[st.session_state.random_word.index, 'weight_to_sample'].values[0]) 
         
