@@ -6,7 +6,7 @@ Seco,1.25
 Enojado,1.75
 Contento,1.25
 Tranquilo,1.25
-Grosero,1.25
+Grosero,1.5
 Pobre ($),1.5
 Pobre,1.25
 Triste,0.96
@@ -18,10 +18,13 @@ Alto,0.94
 Bajo,1.25
 Gordo,0.96
 Fuerte,0.9199999999999999
+Débil,0.96
 Bueno,0.96
+Malo,0.96
 Nuevo,0.9
 Viejo,0.98
 Grande,0.96
+Pequeño,0.96
 Bonito,0.9
 Feo,1.5
 Fácil,1.25
