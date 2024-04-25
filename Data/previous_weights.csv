@@ -1,21 +1,23 @@
 Español,weight_to_sample
 Feliz,1.75
 Limpio,0.88
-Sucio,1.25
+Sucio,1.5
 Enojado,1.75
 Contento,1.25
 Grosero,1.25
 Pobre ($),1.25
 Pobre,1.25
 Cansado,1.67
-Despierto,1.75
+Despierto,2.0
 Rápido,0.98
 Lento,2.25
 Alto,0.98
 Bajo,1.25
 Fuerte,0.96
+Bueno,0.96
 Nuevo,0.9
 Viejo,0.98
+Grande,0.96
 Bonito,0.9
 Feo,1.5
 Fácil,1.25
