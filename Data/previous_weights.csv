@@ -2,10 +2,10 @@ Español,weight_to_sample
 Feliz,1.71
 Hambriento,0.96
 Limpio,0.5
-Sucio,1.46
+Sucio,1.71
 Seco,1.17
 Enojado,1.67
-Contento,1.5
+Contento,1.46
 Tranquilo,1.21
 Cobarde,1.25
 Flaco,1.46
@@ -14,8 +14,8 @@ Grosero,1.5
 Rico,1.25
 Pobre ($),1.5
 Pobre,1.5
-Vacío,2.0
-Triste,0.92
+Vacío,1.96
+Triste,0.88
 Enfermo,0.92
 Cansado,1.51
 Despierto,1.8
@@ -26,11 +26,11 @@ Alto,0.66
 Bajo,2.71
 Gordo,0.92
 Fuerte,0.5
-Débil,0.96
+Débil,0.92
 Bueno,0.96
 Malo,0.96
 Nuevo,0.9
-Viejo,0.86
+Viejo,0.82
 Grande,0.96
 Pequeño,0.8
 Bonito,0.5
