@@ -1,6 +1,7 @@
 import pandas as pd
 import streamlit as st
 import io
+import random
 import time
 
 from github import Github
@@ -96,7 +97,9 @@ if "tries" not in st.session_state:
     st.session_state["tries"] = 0
 
 if st.button('New word', key='new'):
-    st.session_state.random_word = st.session_state["vocabulary"].query('Categoria == @category').sample(n=1, weights='weight_to_sample')
+    x = random.random()
+    _tmp = st.session_state["vocabulary"].query('Categoria == @category')
+    st.session_state.random_word = _tmp[_tmp["weight_to_sample"].cumsum()<= x].tail(1)
     st.session_state.entrada_teclado = ""
     st.session_state["tries"] = 0
 
