@@ -176,7 +176,7 @@ with tab2:
 
     if _z1.button('Show', key='show2'):
         st.write(st.session_state.random_word['Arabe'].values[0] + ' (%s)' % st.session_state.random_word['Pronunciacion'].values[0])
-        st.session_state["tries"] += 0.25
+        st.session_state["tries"] += 0.22
 
 
 
@@ -194,7 +194,7 @@ if st.button('Check', key='check'):
         st.session_state.entrada_teclado = ""
         
         if st.session_state["tries"] == 0:
-            w = -0.04
+            w = -0.05
         else:
             w = 0
         
@@ -208,7 +208,7 @@ if st.button('Check', key='check'):
     else:
         # Markdown Incorrect in red
         st.markdown('<p style="color:Red;">Incorrect</p>', unsafe_allow_html=True)
-        st.session_state["tries"] += 0.5
+        st.session_state["tries"] += 0.41
 
 
 if st.button('Save', key='save'):
